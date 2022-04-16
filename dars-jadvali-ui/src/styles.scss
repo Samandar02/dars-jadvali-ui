@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@mixin responsive($type) {
+    @if $type == m {
+         @media (max-width: 599px) { @content };
+    }
+ }
+body{
+    background: linear-gradient(10deg,hsl(163deg 77% 51%),hsl(182deg 98% 38%));
+    background-repeat: no-repeat;
+    height: 95vh;
+    min-width: 300px;
+}
+.b{
+    border: 1px solid;
+}
+.center{
+    text-align: center;
+}
+.fleft{
+    float: left;
+}
+.item{
+    width: 50%;
+    min-width: 300px;
+    @include responsive(m){
+        width: 100%;
+    }
+}
+.banner{
+    width: 50%;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255,.5);
+    border-radius: 15px;
+    margin: 20px auto 0;
+}
+.b-table{
+    margin: 50px auto;
+    max-width: 500px;
+    width: 90%;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255,.5);
+    border-radius: 15px;
+    @include responsive(m){
+        margin: 50px auto 0;
+    }
+}
+.table{
+    max-width: 1440px;
+    margin: auto;
+}
+

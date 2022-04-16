@@ -1,0 +1,11 @@
+<div class="today">
+  <div class="banner center">
+    <h1>Bugun {{title}}</h1>
+  </div>
+</div>
+<div class="table" >
+  <app-table *ngFor="let item of todaySchedule?.paras" [item]="item"></app-table>
+</div>
+<div *ngIf="hasData" class="no-content">
+  <p>bugun dars yo'q</p>
+</div>
